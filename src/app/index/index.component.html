@@ -1,0 +1,24 @@
+<nbg-accordion #acc="ngbAccordion" class="index-page">
+
+  <ngb-panel id="toggle-1" title="Architecture">
+    <ng-templet ngbPanelContent>
+      Architecture Content
+    </ng-templet>
+
+  </ngb-panel>
+
+  <ngb-panel id="toggle-2" title="Components & Templates">
+      <ng-template ngbPanelContent>
+        <ul class="index-list">
+          <li class="heading">
+            <h6>1. Displaying Data</h6>
+            <ul class="nested-list">
+              <li><a [routerLink]="['/components-templates/display-data-in-template']">Component with template</a></li>
+              <li><a [routerLink]="['/components-templates/display-data-in-template-url']">Component with template url</a></li>
+            </ul>
+          </li>
+        </ul>
+      </ng-template>
+    </ngb-panel>
+
+</nbg-accordion>
