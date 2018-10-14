@@ -6,15 +6,12 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import{AppRoutingModule} from './app-routing/app-routing.module';
 import{ComponentsTemplatesModule} from './components-templates/components-templates.module';
-import { PageNotFoundComponent } from './app-routing/page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent,
-    PageNotFoundComponent
-    
+    IndexComponent
   ],
   imports: [
     BrowserModule,

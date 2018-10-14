@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TemplateSyntaxComponent implements OnInit {
 
   currentHero = {
-    name: "Steven",
+    name: "Steven ",
     power: 200
   };
 
