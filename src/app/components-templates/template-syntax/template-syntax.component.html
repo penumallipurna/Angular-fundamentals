@@ -44,4 +44,82 @@
 <h6>Script tags in property bindings:</h6>
 <p><span>"{{evilTitle}}" is the <i>interpolated</i> evil title.</span></p>
 <p>"<span [innerHTML]="evilTitle"></span>" is the <i>property bound</i> evil title.</p>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+<hr />
+<h6><b>Attribute, class, and style bindings</b></h6>
+<br />
+
+<h6>Attribute binding</h6>
+
+<input type="text" id="name" value="John" placeholder="Name" />
+<br><br>
+
+<table class="table table-bordered text-center">
+  <tr>
+    <td colspan="2">One</td>
+  </tr>
+  <tr>
+    <td>Three-Four</td>
+    <td>Three-Four</td>
+  </tr>
+</table>
+
+<br><br>
+
+<div>Un-comment below binding to get error</div>
+<table class="table table-bordered text-center">
+  <tr>
+    <!-- <td colspan="{{ noOfColumns }}">One</td> -->
+  </tr>
+  <tr>
+    <td>Three-Four</td>
+    <td>Three-Four</td>
+  </tr>
+</table>
+
+
+<div>Attribute binding</div>
+<table class="table table-bordered text-center">
+  <tr>
+    <td [attr.colspan]="noOfColumns">One</td>
+  </tr>
+  <tr>
+    <td>Three-Four</td>
+    <td>Three-Four</td>
+  </tr>
+</table>
+<br>
+
+<h6>Class bindings</h6>
+<div>I. Reset/override all class names with a binding</div>
+<div class="bad curly special" [class]="badCurly">Bad curly</div>
+<br>
+
+<div>II. Toggle a single class</div>
+<div [class.special]="special">This is a special class</div>
+<div [class.special]="!special">This is not a special class</div>
+<div [class.very]="special" [class.special]="special">This is a very special class</div>
+<div class="not" [class.very]="special" [class.special]="special">This is not a very special class</div>
+<br>
+
+<div>III. Toggle Multiple classes(ngClass directive)</div>
+<div [ngClass]="classConditions">Multiple class bindings</div>
+<div class="anotherClass" [ngClass]="classConditions">Multiple class bindings dont override other existing classes</div>
+<br>
+
+<h6>Style bindings</h6>
+<button [style.color]="isSpecial ? 'green': 'red'">Save</button>
+<br><br>
+<button [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
+<br><br>
+<button [style.color]="isSpecial ? 'green': 'red'" [style.background-color]="canSave ? 'cyan': 'grey'">Save</button>
+<br><br>
+<button [style.font-size.px]="isSpecial ? 13 : 21">Big</button>
+<br><br>
+<button [style.fontSize.px]="isSpecial ? 13 : 21">Camel cased fontSize</button>
+<br><br>
+<div [ngStyle]="currentStyles"> Div with ngStyle directive</div>
+
+<br>
+<hr>
