@@ -6,7 +6,9 @@ import {DisplayDataInTemplateComponent} from '../components-templates/display-da
 import {DisplayDataInTemplateUrlComponent} from '../components-templates/display-data-in-template-url/display-data-in-template-url.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {TemplateSyntaxComponent} from '../components-templates/template-syntax/template-syntax.component';
-
+import {CustomEventsComponent} from '../components-templates/custom-events/custom-events.component';
+import { TwoWayBindingComponent } from "../components-templates/two-way-binding/two-way-binding.component";
+import {DirectivesComponent} from '../components-templates/directives/directives.component';
 
 const appRouter:Routes=[
 
@@ -14,6 +16,9 @@ const appRouter:Routes=[
   {path:'components-templates/display-data-in-template',component:DisplayDataInTemplateComponent},
   {path:'components-templates/display-data-in-template-url',component:DisplayDataInTemplateUrlComponent},
   {path:'components-templates/template-syntax',component:TemplateSyntaxComponent},
+  {path: 'components-templates/template-syntax/custom-events',component:CustomEventsComponent},
+  {path:'components-templates/template-syntax/two-way-binding',component:TwoWayBindingComponent},
+  {path:'components-templates/directives',component:DirectivesComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
 ]

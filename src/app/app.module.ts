@@ -19,6 +19,7 @@ import{ComponentsTemplatesModule} from './components-templates/components-templa
     RouterModule,
     ComponentsTemplatesModule,
     NgbModule.forRoot()
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
