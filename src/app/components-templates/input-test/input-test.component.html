@@ -1,0 +1,8 @@
+{{user.name}}<br>
+
+{{user.age}}<br>
+<label>Parent Component -Name: </label><input [(ngModel)]="user.name"/><br>
+<label>Parent Component -Age:  </label><input [(ngModel)]="user.age"/>
+<br>
+<br>
+<app-edit-user [user]="user"></app-edit-user>

@@ -16,7 +16,12 @@ import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective } from './attribute-directives/highlight.directive';
 import { HighlightV1Directive } from './attribute-directives/highlight-v1.directive';
 import { HighlightV2Directive } from './attribute-directives/highlight-v2.directive';
-import { HighlightV3Directive } from './attribute-directives/highlight-v3.directive'
+import { HighlightV3Directive } from './attribute-directives/highlight-v3.directive';
+import { ReverseIfDirective } from './structural-directives/reverse-if.directive';
+import { InputTestComponent } from './input-test/input-test.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { InteractionComponent } from './interaction/interaction.component';
+import { HeroNameComponent } from './hero-name/hero-name.component'
 
 @NgModule({
   imports: [
@@ -24,6 +29,6 @@ import { HighlightV3Directive } from './attribute-directives/highlight-v3.direct
     RouterModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent]
 })
 export class ComponentsTemplatesModule { }

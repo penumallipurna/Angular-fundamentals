@@ -9,6 +9,8 @@ import {TemplateSyntaxComponent} from '../components-templates/template-syntax/t
 import {CustomEventsComponent} from '../components-templates/custom-events/custom-events.component';
 import { TwoWayBindingComponent } from "../components-templates/two-way-binding/two-way-binding.component";
 import {DirectivesComponent} from '../components-templates/directives/directives.component';
+import {InputTestComponent} from '../components-templates/input-test/input-test.component';
+import {InteractionComponent} from '../components-templates/interaction/interaction.component'
 
 const appRouter:Routes=[
 
@@ -19,6 +21,8 @@ const appRouter:Routes=[
   {path: 'components-templates/template-syntax/custom-events',component:CustomEventsComponent},
   {path:'components-templates/template-syntax/two-way-binding',component:TwoWayBindingComponent},
   {path:'components-templates/directives',component:DirectivesComponent},
+  {path:'components-templates/input-test',component:InputTestComponent},
+  {path:'components-templates/interaction',component:InteractionComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
 ]
