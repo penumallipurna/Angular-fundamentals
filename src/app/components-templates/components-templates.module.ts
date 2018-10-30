@@ -21,7 +21,9 @@ import { ReverseIfDirective } from './structural-directives/reverse-if.directive
 import { InputTestComponent } from './input-test/input-test.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { InteractionComponent } from './interaction/interaction.component';
-import { HeroNameComponent } from './hero-name/hero-name.component'
+import { HeroNameComponent } from './hero-name/hero-name.component';
+import { CountdownParentWithTempRefVarComponent } from './countdown-parent-with-temp-ref-var/countdown-parent-with-temp-ref-var.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component'
 
 @NgModule({
   imports: [
@@ -29,6 +31,6 @@ import { HeroNameComponent } from './hero-name/hero-name.component'
     RouterModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent]
 })
 export class ComponentsTemplatesModule { }
