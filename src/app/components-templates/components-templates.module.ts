@@ -23,7 +23,11 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { InteractionComponent } from './interaction/interaction.component';
 import { HeroNameComponent } from './hero-name/hero-name.component';
 import { CountdownParentWithTempRefVarComponent } from './countdown-parent-with-temp-ref-var/countdown-parent-with-temp-ref-var.component';
-import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component'
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { CountdownParentWithViewChildComponent } from './countdown-parent-with-view-child/countdown-parent-with-view-child.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component'
 
 @NgModule({
   imports: [
@@ -31,6 +35,6 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     RouterModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent, CountdownParentWithViewChildComponent, UserDetailComponent, SimpleTodoComponent, TodoDetailComponent]
 })
 export class ComponentsTemplatesModule { }

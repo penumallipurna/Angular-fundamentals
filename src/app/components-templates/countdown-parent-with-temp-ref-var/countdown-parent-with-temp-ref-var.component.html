@@ -1,3 +1,5 @@
-<p>
-  countdown-parent-with-temp-ref-var works!
-</p>
+<button class="btn" (click)="timer.start()">start</button>&nbsp;&nbsp;
+<button class="btn" (click)="timer.stop()">stop</button>
+
+<div class="seconds">{{timer.seconds}}</div>
+<app-countdown-timer #timer></app-countdown-timer>

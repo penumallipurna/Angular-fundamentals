@@ -1,3 +1,21 @@
 <p>Hero Name:{{currentHero.name}}</p>
 <app-hero-name [name]="currentHero.name"></app-hero-name>
+<br><br>
+<h6>Parent interacts with child via template reference variable:</h6>
+<app-countdown-parent-with-temp-ref-var></app-countdown-parent-with-temp-ref-var>
 
+<br>
+<h6>Using @ViewChild():</h6>
+<app-countdown-parent-with-view-child></app-countdown-parent-with-view-child>
+
+<br>
+
+<h6>Using @childContent</h6>
+<app-user-detail #detail>
+    <div>user edit form start</div>
+    <app-edit-user [user]="detail.user"></app-edit-user>
+    <div>user edit form edit</div>
+</app-user-detail>
+<br>
+<h6>parent and children communication via service</h6>
+<app-simple-todo></app-simple-todo>
