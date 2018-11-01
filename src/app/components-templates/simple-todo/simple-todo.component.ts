@@ -11,9 +11,9 @@ export class SimpleTodoComponent implements OnInit {
 
   userActions=[];
   constructor(private tracker:TodoServiceService) {
-    this.tracker.todoObservable$.subscribe(actions=>
+    this.tracker.todoObservable$.subscribe(todoActions=>
       {
-        this.userActions.push(actions);
+        this.userActions.push(todoActions);
       });
    }
 

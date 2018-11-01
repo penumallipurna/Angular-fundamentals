@@ -10,7 +10,9 @@ import {CustomEventsComponent} from '../components-templates/custom-events/custo
 import { TwoWayBindingComponent } from "../components-templates/two-way-binding/two-way-binding.component";
 import {DirectivesComponent} from '../components-templates/directives/directives.component';
 import {InputTestComponent} from '../components-templates/input-test/input-test.component';
-import {InteractionComponent} from '../components-templates/interaction/interaction.component'
+import {InteractionComponent} from '../components-templates/interaction/interaction.component';
+import {LifecycleHooksComponent} from '../components-templates/lifecycle-hooks/lifecycle-hooks.component';
+import {LifecycleViewHooksComponent} from '../components-templates/lifecycle-view-hooks/lifecycle-view-hooks.component';
 
 const appRouter:Routes=[
 
@@ -23,6 +25,8 @@ const appRouter:Routes=[
   {path:'components-templates/directives',component:DirectivesComponent},
   {path:'components-templates/input-test',component:InputTestComponent},
   {path:'components-templates/interaction',component:InteractionComponent},
+  {path:'components-templates/lifecycle-hooks',component:LifecycleHooksComponent},
+  {path: 'components-templates/lifecycle-hooks/view-hooks',component:LifecycleViewHooksComponent },
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
 ]
