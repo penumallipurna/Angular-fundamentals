@@ -13,7 +13,7 @@ import {InputTestComponent} from '../components-templates/input-test/input-test.
 import {InteractionComponent} from '../components-templates/interaction/interaction.component';
 import {LifecycleHooksComponent} from '../components-templates/lifecycle-hooks/lifecycle-hooks.component';
 import {LifecycleViewHooksComponent} from '../components-templates/lifecycle-view-hooks/lifecycle-view-hooks.component';
-
+import {LifecycleContentHooksComponent} from '../components-templates/lifecycle-content-hooks/lifecycle-content-hooks.component';
 const appRouter:Routes=[
 
   {path :'index', component: IndexComponent},
@@ -27,6 +27,7 @@ const appRouter:Routes=[
   {path:'components-templates/interaction',component:InteractionComponent},
   {path:'components-templates/lifecycle-hooks',component:LifecycleHooksComponent},
   {path: 'components-templates/lifecycle-hooks/view-hooks',component:LifecycleViewHooksComponent },
+  { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent },
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
 ]
