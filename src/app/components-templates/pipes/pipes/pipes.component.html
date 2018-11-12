@@ -1,0 +1,54 @@
+<h6><b>Pipes</b></h6>
+<div>Birth day</div>
+<div>Without pipe: {{ birthday }}</div>
+<div>With pipe: {{ birthday | date }}</div>
+<div>With pipe and parameter: {{ birthday | date:'MM/dd/yy' }}</div>
+<div>With pipe chaining: {{ birthday | date | uppercase }}</div>
+
+<br>
+<h6>Custom Pipes</h6>
+<div>2 power 10 is {{ 2 | exponentialStrength: 10 }}</div>
+<div>The preferred name of {{ name }} is {{ name | formatName: 'middle' : 'last' }}</div>
+<div>The preferred name of {{ name }} is {{ name | formatName: 'first' : 'last' }}</div>
+<div>The preferred name of {{ name }} is {{ name | formatName: 'first' : 'middle' }}</div>
+
+<br>
+<h6>Pure Pipes</h6>
+
+<br>
+<div>Heroes without pipe(All Heroes )</div>
+<ul>
+  <li *ngFor="let hero of heroes">{{ hero.name }}</li>
+</ul>
+
+<br>
+<div>Pure pipes can't detect change in Element property changes / Changes to the same array reference</div>
+<div>Pure pipes can only detect the Variable / Object / Array reference change</div>
+
+<div style="margin: 10px 0px;">
+  <label>Add hero by pushing object:</label> &nbsp;&nbsp;
+  <input type="text" [(ngModel)]="newHero.name" #heroName (keyup.enter)="pushHero(heroName.value, can.value)" placeholder="Type name and hit enter" /> &nbsp;&nbsp;
+  <input type="checkbox" [(ngModel)]="newHero.canFly" #can /> Can Fly
+</div>
+
+<div style="margin: 10px 0px;">
+  <label>Add hero by reference change:</label> &nbsp;&nbsp; 
+  <input type="text" [(ngModel)]="newHero.name" #heroName2 (keyup.enter)="concatHero(heroName2.value, can2.value)" placeholder="Type name and hit enter" /> &nbsp;&nbsp;
+  <input type="checkbox" [(ngModel)]="newHero.canFly" #can2 /> Can Fly
+</div>
+
+<div>Heroes with flyingHeroesPure pipe</div>
+<ul>
+  <li *ngFor="let hero of (heroes | flyingHeroesPure)">{{ hero.name }}</li>
+</ul>
+
+<br>
+<div>Heroes with flyingHeroesImpure pipe</div>
+<div>Impure pipe can respond for any kind of change(Mutation of object properties / Reference change)</div>
+<ul>
+  <li *ngFor="let hero of (heroes | flyingHeroesImpure)">{{ hero.name }}</li>
+</ul>
+
+
+
+

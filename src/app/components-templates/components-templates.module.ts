@@ -33,7 +33,12 @@ import { UserCycleComponent } from './user-cycle/user-cycle.component';
 import { LifecycleViewHooksComponent } from './lifecycle-view-hooks/lifecycle-view-hooks.component';
 import { UserAfterViewDetailComponent } from './user-after-view-detail/user-after-view-detail.component';
 import { LifecycleContentHooksComponent } from './lifecycle-content-hooks/lifecycle-content-hooks.component';
-import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component'
+import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component';
+import { PipesComponent } from './pipes/pipes/pipes.component';
+import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
+import { FlyingHeroesPurePipe } from './pipes/flying-heroes-pure.pipe';
+import { FlyingHeroesImpurePipe } from './pipes/flying-heroes-impure.pipe';
+import { FormatNamePipe } from './pipes/format-name.pipe'
 
 @NgModule({
   imports: [
@@ -41,6 +46,6 @@ import { UserAfterContentDetailComponent } from './user-after-content-detail/use
     RouterModule,
     FormsModule
   ],
-  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent, CountdownParentWithViewChildComponent, UserDetailComponent, SimpleTodoComponent, TodoDetailComponent, LifecycleHooksComponent, UserCycleComponent, LifecycleViewHooksComponent, UserAfterViewDetailComponent, LifecycleContentHooksComponent, UserAfterContentDetailComponent]
+  declarations: [DisplayDataInTemplateComponent, DisplayDataInTemplateUrlComponent, TemplateSyntaxComponent, HeroDetailComponent, CustomEventsComponent, DisplayHeroComponent, HeroBioComponent, TwoWayBindingComponent, FontSizerComponent, DirectivesComponent, HighlightDirective, HighlightV1Directive, HighlightV2Directive, HighlightV3Directive, ReverseIfDirective, InputTestComponent, EditUserComponent, InteractionComponent, HeroNameComponent, CountdownParentWithTempRefVarComponent, CountdownTimerComponent, CountdownParentWithViewChildComponent, UserDetailComponent, SimpleTodoComponent, TodoDetailComponent, LifecycleHooksComponent, UserCycleComponent, LifecycleViewHooksComponent, UserAfterViewDetailComponent, LifecycleContentHooksComponent, UserAfterContentDetailComponent, PipesComponent, ExponentialStrengthPipe, FlyingHeroesPurePipe, FlyingHeroesImpurePipe, FormatNamePipe]
 })
 export class ComponentsTemplatesModule { }
