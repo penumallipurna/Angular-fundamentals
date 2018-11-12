@@ -14,7 +14,9 @@ import {InteractionComponent} from '../components-templates/interaction/interact
 import {LifecycleHooksComponent} from '../components-templates/lifecycle-hooks/lifecycle-hooks.component';
 import {LifecycleViewHooksComponent} from '../components-templates/lifecycle-view-hooks/lifecycle-view-hooks.component';
 import {LifecycleContentHooksComponent} from '../components-templates/lifecycle-content-hooks/lifecycle-content-hooks.component';
+import {StylesDemoComponent} from '../components-templates/style-components/styles-demo/styles-demo.component';
 import {PipesComponent} from '../components-templates/pipes/pipes/pipes.component';
+
 
 const appRouter:Routes=[
 
@@ -30,6 +32,7 @@ const appRouter:Routes=[
   {path:'components-templates/lifecycle-hooks',component:LifecycleHooksComponent},
   {path: 'components-templates/lifecycle-hooks/view-hooks',component:LifecycleViewHooksComponent },
   { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent },
+  {path:'components-templates/styles-demo',component:StylesDemoComponent},
   {path:'components-templates/pipes',component:PipesComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
