@@ -1,0 +1,23 @@
+<h6><b>Subjects</b></h6> <br>
+
+<app-colorful-text></app-colorful-text>
+
+<br>
+
+<app-color-input></app-color-input>
+
+<br>
+<h6>Subjects works with only one execution context(Singleton) and Multicast the values</h6>
+<div>numbersObservable$ logs</div>
+<ul class="logs">
+    <li *ngFor="let log of observableLogs">{{ log }}</li>
+</ul>
+
+<div>numbersSubject logs</div>
+<ul class="logs">
+    <li *ngFor="let log of subjectLogs">{{ log }}</li>
+</ul>
+<div>numbersSubjectObservable$ logs</div>
+<ul class="logs">
+  <li *ngFor="let log of subjectObservableLogs">{{log}}</li>
+</ul>

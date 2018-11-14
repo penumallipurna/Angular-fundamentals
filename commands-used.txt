@@ -1,0 +1,22 @@
+ng new angular-fundamentals
+
+ng serve --open
+
+ng generate module app-routing
+
+npm install bootstarp --save
+
+ng generate component index --module="app.module"
+
+ng generate module components-templates
+
+
+json-server:
+============
+https://www.npmjs.com/package/json-server
+
+Install it globally: 
+> npm install -g json-server
+
+Run server:
+> json-server --watch db.json

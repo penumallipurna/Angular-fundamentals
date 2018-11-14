@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import{AppRoutingModule} from './app-routing/app-routing.module';
 import{ComponentsTemplatesModule} from './components-templates/components-templates.module';
+import {RxDemoModule} from '../app/rx-demo/rx-demo.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import{ComponentsTemplatesModule} from './components-templates/components-templa
     AppRoutingModule,
     RouterModule,
     ComponentsTemplatesModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    RxDemoModule
   
   ],
   providers: [],

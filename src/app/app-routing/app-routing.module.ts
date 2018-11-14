@@ -18,8 +18,13 @@ import {StylesDemoComponent} from '../components-templates/style-components/styl
 import {PipesComponent} from '../components-templates/pipes/pipes/pipes.component';
 
 
+import {ObservablesDemoComponent} from '../rx-demo/observables-demo/observables-demo.component';
+import {SubjectDemoComponent} from '../rx-demo/subject-demo/subject-demo.component';
+
+
 const appRouter:Routes=[
 
+   /* Components - Templates */
   {path :'index', component: IndexComponent},
   {path:'components-templates/display-data-in-template',component:DisplayDataInTemplateComponent},
   {path:'components-templates/display-data-in-template-url',component:DisplayDataInTemplateUrlComponent},
@@ -31,9 +36,15 @@ const appRouter:Routes=[
   {path:'components-templates/interaction',component:InteractionComponent},
   {path:'components-templates/lifecycle-hooks',component:LifecycleHooksComponent},
   {path: 'components-templates/lifecycle-hooks/view-hooks',component:LifecycleViewHooksComponent },
-  { path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent },
+  {path: 'components-templates/lifecycle-hooks/content-hooks', component:  LifecycleContentHooksComponent },
   {path:'components-templates/styles-demo',component:StylesDemoComponent},
   {path:'components-templates/pipes',component:PipesComponent},
+ 
+
+  /* rx-demo module routes */
+  {path:'rx-demo/observables-demo',component:ObservablesDemoComponent},
+  {path:'rxjs/subjects-demo',component:SubjectDemoComponent},
+
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
 ]
