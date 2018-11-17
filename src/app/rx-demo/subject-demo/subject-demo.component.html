@@ -21,3 +21,29 @@
 <ul class="logs">
   <li *ngFor="let log of subjectObservableLogs">{{log}}</li>
 </ul>
+<div>subject as both observable and observer</div>
+<ul class="logs">
+  <li *ngFor="let log of namesSubjectLogs">{{ log }}</li>
+</ul>
+<br>
+<h6>Different types of Subjects</h6>
+<div>Regular Subject logs</div>
+<ul class="logs">
+    <li *ngFor="let log of regularSubjectLogs">{{ log }}</li>
+</ul>
+<br>
+<div>Behaviour Subject logs</div>
+<ul class="logs">
+    <li *ngFor="let log of behavoiurSubjectLogs">{{ log }}</li>
+</ul>
+<br>
+<div>Replay  Subject logs</div>
+<ul class="logs">
+    <li *ngFor="let log of replaySubjectLogs">{{ log }}</li>
+</ul>
+<br>
+<div>Async Subject logs</div>
+<ul class="logs">
+    <li *ngFor="let log of asyncSubjectLogs">{{ log }}</li>
+</ul>
+

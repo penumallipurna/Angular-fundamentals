@@ -7,6 +7,10 @@ import { IndexComponent } from './index/index.component';
 import{AppRoutingModule} from './app-routing/app-routing.module';
 import{ComponentsTemplatesModule} from './components-templates/components-templates.module';
 import {RxDemoModule} from '../app/rx-demo/rx-demo.module';
+import {ModulesDemoModule} from './modules-demo/modules-demo.module';
+import {CounterOneModule} from './counter-one/counter-one.module';
+import{CounterTwoModule} from './counter-two/counter-two.module';
+import {CoreModule} from './core/core.module';
 
 
 @NgModule({
@@ -20,7 +24,12 @@ import {RxDemoModule} from '../app/rx-demo/rx-demo.module';
     RouterModule,
     ComponentsTemplatesModule,
     NgbModule.forRoot(),
-    RxDemoModule
+    RxDemoModule,
+    ModulesDemoModule,
+    //CounterOneModule,
+    CounterOneModule.forRoot(),
+    CounterTwoModule,
+    CoreModule
   
   ],
   providers: [],

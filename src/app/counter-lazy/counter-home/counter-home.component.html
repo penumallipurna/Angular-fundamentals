@@ -1,0 +1,12 @@
+<h6><b>Lazy Counter</b></h6>
+<app-display-count></app-display-count>
+<app-increase-count></app-increase-count>
+<br><br><br>
+<h6>Core Module - UtilService Demo</h6>
+<div>User name is {{ userName }}</div>
+<div>
+    <input type="text" [(ngModel)]="username" (keyup)="updateUserName()" />
+</div>
+
+<br><br>
+<a class="btn btn-outline-primary" [routerLink]="['../ngmodules/eager-vs-lazy-loading']">&lt;&lt; Back to Eager Loading Vs Lazy Loading</a>
