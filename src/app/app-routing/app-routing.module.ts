@@ -50,7 +50,7 @@ const appRouter:Routes=[
   {path:'ngmodules/eager-vs-lazy-loading',component:EagerVsLazyLoadingComponent},
   {path:'ngmodules/eager-vs-lazy-loading/counter-one-home',component:CounterOneHomeComponent},
   {path:'ngmodules/eager-vs-lazy-loading/counter-two-home',component:CounterTwoHomeComponent},
-  {path: 'lazy-counter-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
+  {path: 'counter-lazy-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
 
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}

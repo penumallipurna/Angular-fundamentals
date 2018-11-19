@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import {CounterHomeComponent} from './counter-home/counter-home.component';
 
 
