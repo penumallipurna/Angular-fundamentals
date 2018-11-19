@@ -21,7 +21,9 @@ import {PipesComponent} from '../components-templates/pipes/pipes/pipes.componen
 import {ObservablesDemoComponent} from '../rx-demo/observables-demo/observables-demo.component';
 import {SubjectDemoComponent} from '../rx-demo/subject-demo/subject-demo.component';
 
+import {LazyLoadingDemoComponent} from '../modules-demo/lazy-loading-demo/lazy-loading-demo.component';
 import {EagerVsLazyLoadingComponent} from '../modules-demo/eager-vs-lazy-loading/eager-vs-lazy-loading.component';
+
 import {CounterHomeComponent as CounterOneHomeComponent} from '../counter-one/counter-home/counter-home.component';
 import {CounterHomeComponent as CounterTwoHomeComponent} from '../counter-two/counter-home/counter-home.component';
 const appRouter:Routes=[
@@ -47,10 +49,19 @@ const appRouter:Routes=[
   {path:'rx-demo/observables-demo',component:ObservablesDemoComponent},
   {path:'rxjs/subjects-demo',component:SubjectDemoComponent},
 
+   /* Lazy modules routes */
+   {path:'ngmodules/lazy-loading-demo',component: LazyLoadingDemoComponent},
+
+   
+   /* Lazy loading demo routes */
+   {path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
+   {path: 'customers/', loadChildren: '../customers/customers.module#CustomersModule' },
+   {path:'orders',loadChildren: '../orders/orders.module#OrdersModule'},
+
   {path:'ngmodules/eager-vs-lazy-loading',component:EagerVsLazyLoadingComponent},
   {path:'ngmodules/eager-vs-lazy-loading/counter-one-home',component:CounterOneHomeComponent},
   {path:'ngmodules/eager-vs-lazy-loading/counter-two-home',component:CounterTwoHomeComponent},
-  {path: 'counter-lazy-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
+  {path: 'lazy-counter-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
 
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}
