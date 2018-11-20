@@ -26,6 +26,13 @@ import {EagerVsLazyLoadingComponent} from '../modules-demo/eager-vs-lazy-loading
 
 import {CounterHomeComponent as CounterOneHomeComponent} from '../counter-one/counter-home/counter-home.component';
 import {CounterHomeComponent as CounterTwoHomeComponent} from '../counter-two/counter-home/counter-home.component';
+
+import {FormControlComponent} from '../forms-demo/reactive/form-control/form-control.component';
+import {FormGroupComponent} from '../forms-demo/reactive/form-group/form-group.component';
+import {NestedFormGroupComponent} from '../forms-demo/reactive/nested-form-group/nested-form-group.component';
+import {FormBuilderComponent} from '../forms-demo/reactive/form-builder/form-builder.component';
+import {FormArrayComponent} from '../forms-demo/reactive/form-array/form-array.component';
+
 const appRouter:Routes=[
 
    /* Components - Templates */
@@ -55,13 +62,20 @@ const appRouter:Routes=[
    
    /* Lazy loading demo routes */
    {path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
-   {path: 'customers/', loadChildren: '../customers/customers.module#CustomersModule' },
+   
    {path:'orders',loadChildren: '../orders/orders.module#OrdersModule'},
 
   {path:'ngmodules/eager-vs-lazy-loading',component:EagerVsLazyLoadingComponent},
   {path:'ngmodules/eager-vs-lazy-loading/counter-one-home',component:CounterOneHomeComponent},
   {path:'ngmodules/eager-vs-lazy-loading/counter-two-home',component:CounterTwoHomeComponent},
   {path: 'lazy-counter-home', loadChildren: '../counter-lazy/counter-lazy.module#CounterLazyModule' },
+
+
+  {path:'forms-demo/reactive/form-control',component:FormControlComponent},
+  {path:'forms-demo/reactive/form-group',component:FormGroupComponent},
+  {path:'forms-demo/reactive/nested-form-group',component:NestedFormGroupComponent},
+  {path:'forms-demo/reactive/form-builder',component:FormBuilderComponent},
+  {path:'forms-demo/reactive/form-array',component:FormArrayComponent},
 
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}

@@ -11,6 +11,8 @@ import {ModulesDemoModule} from './modules-demo/modules-demo.module';
 import {CounterOneModule} from './counter-one/counter-one.module';
 import{CounterTwoModule} from './counter-two/counter-two.module';
 import {CoreModule} from './core/core.module';
+import {FormsDemoModule} from './forms-demo/forms-demo.module';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import {CoreModule} from './core/core.module';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
     ComponentsTemplatesModule,
     NgbModule.forRoot(),
     RxDemoModule,
@@ -29,7 +32,9 @@ import {CoreModule} from './core/core.module';
     //CounterOneModule,
     CounterOneModule.forRoot(),
     CounterTwoModule,
-    CoreModule
+    CoreModule,
+    FormsDemoModule
+    
   
   ],
   providers: [],
