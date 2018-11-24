@@ -1,0 +1,113 @@
+<div class="container fundamentals-form">
+    <form (ngSubmit)="onSubmit(heroForm)" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="heroObj.name" name="name" #name="ngModel" required minlength="4" maxlength="10">
+        
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+          <div *ngIf="name.errors.maxlength">
+            Name should not be more than 10 characters.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego (Second Personality)</label>
+        <input type="text" class="form-control" id="alterEgo" [(ngModel)]="heroObj.alterEgo" name="alterEgo">
+      </div>
+  
+      <div class="form-group">
+        <label for="power">Hero Power</label>
+        <select class="form-control" id="power" [(ngModel)]="heroObj.power" name="power" #power="ngModel" required>
+          <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+        </select>
+        <div *ngIf="power.invalid && (power.dirty || power.touched)" class="alert alert-danger">
+          <div *ngIf="power.errors.required">
+            Power is required
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" [(ngModel)]="heroObj.email" name="email" #email="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+  
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors.required">
+            Email is required.
+          </div>
+          <div *ngIf="email.errors.pattern">
+            Please enter a valid email.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="seconderyEmail">Secondery Email</label>
+        <input type="text" class="form-control" id="seconderyEmail" [(ngModel)]="heroObj.seconderyEmail" name="seconderyEmail" #seconderyEmail="ngModel" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+  
+        <div *ngIf="seconderyEmail.invalid && (seconderyEmail.dirty || seconderyEmail.touched)" class="alert alert-danger">
+          <div *ngIf="seconderyEmail.errors.pattern">
+            Please enter a valid email.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Available</label>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" [(ngModel)]="heroObj.available" value="yes" name="available" required>
+          <label class="form-check-label">Yes</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" [(ngModel)]="heroObj.available" value="no" name="available" required>
+          <label class="form-check-label">No</label>
+        </div>
+      </div>
+  
+      <div class="form-group">
+          <label for="nickName">Nick Name</label>
+          <input type="text" class="form-control" id="nickName" [(ngModel)]="heroObj.nickName" name="nickName" #nickName="ngModel" required appForbiddenNameValidator [forbiddenNames]="forbiddenNames">
+    
+          <div *ngIf="nickName.invalid && (nickName.dirty || nickName.touched)" class="alert alert-danger">
+            <div *ngIf="nickName.errors.required">
+              Nick name is required.
+            </div>
+            <div *ngIf="nickName.errors.forbiddenName">
+              {{ nickName.errors.forbiddenName.value }} is not allowed as nick name. 
+            </div>
+          </div>
+        </div>
+  
+      <div class="form-group">
+        <label for="userName">User Name</label>
+        <input type="text" class="form-control" id="userName" [(ngModel)]="heroObj.userName" name="userName" #userName="ngModel" required appUniqueUserNameAsyncValidator>
+  
+        <div *ngIf="userName.pending">Validating....</div>
+        <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
+          <div *ngIf="userName.errors.required">
+            User name is required.
+          </div>
+          <div *ngIf="userName.errors.uniqueUserName">
+            {{ userName.errors.uniqueUserName }} is already taken. Please choose another.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label>Vehicles</label>
+        <div class="form-check" *ngFor="let vehicle of vehiclesArr">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="vehicle.selected" [value]="vehicle.selected" name="vehicles" required>
+          <label class="form-check-label">{{ vehicle.label }}</label>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+    </form>
+  </div>

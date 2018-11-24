@@ -77,6 +77,13 @@
             <li><a [routerLink]="['/rxjs/subjects-demo']">Subjects Demo</a></li>
           </ul>
         </li>
+        <li class="heading">
+          <h6>3. Operators</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/rxjs/operators-demo']">Operators Demo</a></li>
+            <li><a [routerLink]="['/rxjs/different-operators']">Different Operators</a></li>
+          </ul>
+        </li>
         
       </ul>
     </ng-template>
@@ -113,7 +120,19 @@
                 <li><a [routerLink]="['../forms-demo/reactive/form-array']">Form Array</a></li>
             </ul>
           </li>
-          
+          <li class="heading">
+            <h6>2. Template Driven Forms</h6>
+            <ul class="nested-list">
+              <li><a [routerLink]="['../forms-demo/template-driven/super-hero']">Template Driven Forms</a></li>
+            </ul>
+          </li>
+          <li class="heading">
+            <h6>3. Form Validation</h6>
+            <ul class="nested-list">
+              <li><a [routerLink]="['../forms-demo/reactive/reactive-form-validation']">Reactive Forms Validation</a></li>
+              <li><a [routerLink]="['../forms-demo/template-driven/template-driven-form-validation']">Template-Driven Forms Validation</a></li>
+            </ul>
+          </li>
         </ul>
       </ng-template>
     </ngb-panel>

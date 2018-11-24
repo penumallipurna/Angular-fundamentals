@@ -1,0 +1,34 @@
+<h6><b>Operators</b></h6> <br>
+
+<div>map operator simple demo logs</div>
+<ul class="logs">
+    <li *ngFor="let log of squaredNumbersLogs">{{ log }}</li>
+</ul>
+
+<div>Custom operator: Multiply by given operator</div>
+<ul class="logs">
+    <li *ngFor="let log of multipliedNumberLogs">{{ log }}</li>
+</ul>
+
+<div>Applying map and filter operators</div>
+<ul class="logs">
+    <li *ngFor="let log of oddFilteredLogs">{{ log }}</li>
+</ul>
+
+<div>Applying map and filter operators through pipe()</div>
+<ul class="logs">
+    <li *ngFor="let log of squareOddLogs">{{ log }}</li>
+</ul>
+
+<div>Applying pipe() on observable</div>
+<ul class="logs">
+    <li *ngFor="let log of squaredOddLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6>Marble Diagrams</h6>
+<img src="assets/images/marble.PNG" style="width: 80%;margin-top: 10px;"/>
+
+<br>
+<h6>Map Marble Diagram</h6>
+<img src="assets/images/map-marble.PNG" style="width: 80%;margin-top: 10px;"/>

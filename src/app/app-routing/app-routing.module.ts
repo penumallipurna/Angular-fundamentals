@@ -20,6 +20,8 @@ import {PipesComponent} from '../components-templates/pipes/pipes/pipes.componen
 
 import {ObservablesDemoComponent} from '../rx-demo/observables-demo/observables-demo.component';
 import {SubjectDemoComponent} from '../rx-demo/subject-demo/subject-demo.component';
+import {OperatorsDemoComponent} from '../rx-demo/operators-demo/operators-demo.component';
+import {DifferentOperatorsComponent} from '../rx-demo/different-operators/different-operators.component';
 
 import {LazyLoadingDemoComponent} from '../modules-demo/lazy-loading-demo/lazy-loading-demo.component';
 import {EagerVsLazyLoadingComponent} from '../modules-demo/eager-vs-lazy-loading/eager-vs-lazy-loading.component';
@@ -32,6 +34,9 @@ import {FormGroupComponent} from '../forms-demo/reactive/form-group/form-group.c
 import {NestedFormGroupComponent} from '../forms-demo/reactive/nested-form-group/nested-form-group.component';
 import {FormBuilderComponent} from '../forms-demo/reactive/form-builder/form-builder.component';
 import {FormArrayComponent} from '../forms-demo/reactive/form-array/form-array.component';
+import {SuperHeroComponent} from '../forms-demo/template-driven/super-hero/super-hero.component';
+import {ReactiveFormValidationComponent} from '../forms-demo/reactive/reactive-form-validation/reactive-form-validation.component';
+import {TemplateDrivenFormValidationComponent} from '../forms-demo/template-driven/template-driven-form-validation/template-driven-form-validation.component';
 
 const appRouter:Routes=[
 
@@ -55,6 +60,9 @@ const appRouter:Routes=[
   /* rx-demo module routes */
   {path:'rx-demo/observables-demo',component:ObservablesDemoComponent},
   {path:'rxjs/subjects-demo',component:SubjectDemoComponent},
+  {path:'rxjs/operators-demo',component:OperatorsDemoComponent},
+  {path: 'rxjs/different-operators', component: DifferentOperatorsComponent },
+
 
    /* Lazy modules routes */
    {path:'ngmodules/lazy-loading-demo',component: LazyLoadingDemoComponent},
@@ -62,7 +70,6 @@ const appRouter:Routes=[
    
    /* Lazy loading demo routes */
    {path: 'customers', loadChildren: '../customers/customers.module#CustomersModule' },
-   
    {path:'orders',loadChildren: '../orders/orders.module#OrdersModule'},
 
   {path:'ngmodules/eager-vs-lazy-loading',component:EagerVsLazyLoadingComponent},
@@ -76,6 +83,9 @@ const appRouter:Routes=[
   {path:'forms-demo/reactive/nested-form-group',component:NestedFormGroupComponent},
   {path:'forms-demo/reactive/form-builder',component:FormBuilderComponent},
   {path:'forms-demo/reactive/form-array',component:FormArrayComponent},
+  {path:'forms-demo/template-driven/super-hero',component:SuperHeroComponent},
+  {path:'forms-demo/reactive/reactive-form-validation',component:ReactiveFormValidationComponent},
+  {path:'forms-demo/template-driven/template-driven-form-validation',component:TemplateDrivenFormValidationComponent},
 
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path:'**' ,component:PageNotFoundComponent}

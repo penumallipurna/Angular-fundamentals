@@ -1,0 +1,81 @@
+<h6><b>1. map</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of numbersMappedLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>2. filter</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of filterLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>3. combineLatest</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of combineLatestLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>4. concat</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of concatLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>5. merge</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of mergeLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>6. startWith</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of startWithLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>7. withLatestFrom</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of withLatestFromLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>8. zip</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of zipLogs">{{ log | json }}</li>
+</ul>
+
+<br>
+<h6><b>9. debounceTime</b></h6>
+<input type="text" value="" id="name" />
+<ul class="logs">
+  <li *ngFor="let log of debounceTimeLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>10. distinct & distinctUntilChanged</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of distinctLogs">{{ log }}</li>
+</ul>
+
+<ul class="logs">
+  <li *ngFor="let log of distinctUntilChangedLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>11. take</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of takeLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>12. takeUntil</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of takeUntilLogs">{{ log }}</li>
+</ul>
+
+<br>
+<h6><b>13. bufferTime</b></h6>
+<ul class="logs">
+  <li *ngFor="let log of bufferTimeLogs">{{ log | json}}</li>
+</ul>

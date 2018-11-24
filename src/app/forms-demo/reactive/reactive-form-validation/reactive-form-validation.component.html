@@ -1,0 +1,142 @@
+<div class="container fundamentals-form">
+  <form [formGroup]="heroFormGroup" (ngSubmit)="onSubmit()">
+
+    <!-- Refering name control from heroFormGroup -->
+    <!-- <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" class="form-control" formControlName="name">
+
+      <div *ngIf="heroFormGroup.controls.name.invalid && (heroFormGroup.controls.name.dirty || heroFormGroup.controls.name.touched)" class="alert alert-danger">
+        <div *ngIf="heroFormGroup.controls.name.errors.required">
+          Name is required.
+        </div>
+        <div *ngIf="heroFormGroup.controls.name.errors.minlength">
+          Name must be at least 4 characters long.
+        </div>
+        <div *ngIf="heroFormGroup.controls.name.errors.maxlength">
+          Name should not be more than 10 characters.
+        </div>
+      </div>
+    </div> -->
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" id="name" formControlName="name">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors.required">
+          Name is required
+        </div>
+        <div *ngIf="name.errors.minlength">
+          Name should be atleast 4 characters
+        </div>
+        <div *ngIf="name.errors.maxlength">
+          Name should not contian more than 10 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">alterEgo</label>
+      <input id="alterEgo" class="form-control" formControlName="alterEgo">
+    </div>
+
+    <div class="form-group">
+      <label for="power">power</label>
+      <select class="form-control" id="power" formControlName="power">
+        <option *ngFor="let pow of power" [value]="pow">{{pow}}</option>
+      </select>
+
+      <div *ngIf="powers.invalid && powers.touched" class="alert alert-danger">
+        <div *ngIf="powers.errors.required">Power is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" formControlName="email">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors.required">
+            Email is required.
+          </div>
+          <div *ngIf="email.errors.email">
+            Please enter a valid email.
+          </div>
+        </div>
+      </div>
+  
+
+    <div class="form-group">
+      <label for="secondaryEmail">secondaryEmail</label>
+      <input id="secondaryEmail" type="text" class="form-control" formControlName="secondaryEmail">
+      <div *ngIf="secondaryEmail.invalid && (secondaryEmail.dirty || secondaryEmail.touched)" class="alert alert-danger">
+        <div *ngIf="secondaryEmail.errors?.pattern">
+          please enter valid email
+        </div>
+      </div> 
+    </div>
+
+    <div class="form-group">
+      <label>Available</label>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" value="yes" formControlName="available">
+        <label class="form-check-label">Yes</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" value="no" formControlName="available">
+        <label class="form-check-label">No</label>
+      </div>
+
+      <div class="alert alert-danger" *ngIf="available.invalid && (available.dirty || available.touched)">
+        <div *ngIf="available.errors.required">
+          Please selsct availability
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nickName">NickName</label>
+      <input id="nickName" class="form-control" formControlName="nickName">
+      <div *ngIf="nickName.invalid && (nickName.dirty || nickName.touched)" class="alert alert-danger">
+        <div *ngIf="nickName.errors.required">
+          NickName is required
+        </div>
+        <div *ngIf="nickName.errors.forbiddenName">
+          {{nickName.errors.forbiddenName.value}} is not allowed as nickname
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="userName">User Name</label>
+        <input id="userName" class="form-control" formControlName="userName">
+  
+        <div *ngIf="userName.pending">Validating....</div>
+        <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
+          <div *ngIf="userName.errors.required">
+            User name is required.
+          </div>
+          <div *ngIf="userName.errors.uniqueUserName">
+            {{ userName.errors.uniqueUserName }} is already taken. Please choose another.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label>Vehicles</label>
+          <div class="form-check" *ngFor="let vehicle of vehicles.controls; let i=index">
+            <input class="form-check-input" type="checkbox" [formControl]="vehicle">
+            <label class="form-check-label">{{ vehiclesArr[i].label }}</label>
+          </div>
+    
+          <div *ngIf="vehicles.invalid && (vehicles.dirty || vehicles.touched)" class="alert alert-danger">
+            <div *ngIf="vehicles.errors.required">
+              Please select atleast one vehicle. 
+            </div>
+          </div>
+        </div>
+    
+      <button type="submit" class="btn btn-default" [disabled]="heroFormGroup.invalid || heroFormGroup.status == 'PENDING'">Submit</button> &nbsp;&nbsp;
+      <button type="button" class="btn btn-default" (click)="heroFormGroup.reset()">Reset</button>
+  </form>
+
+</div>
